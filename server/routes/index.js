@@ -3,11 +3,7 @@ const router = express.Router();
 const app = express();
 const List = require("../model/todo.model");
 
-router.get('/', (req, res) => {
-    res.redirect('/lists');
-})
-
-router.get("/lists", (req, res) => {
+router.get(["/", "/lists"], (req, res) => {
     List.find((err, lists) => {
         if (err) return { success: false, error: err };
         return res.json({ success: true, lists });
