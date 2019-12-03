@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from './header';
+import ActionBar from './action-bar';
 
 const App = () => {
     return (
-        <div className='first'>Hello Welcome</div>
+        <>
+            <Header />
+            <ActionBar />
+        </>
     )
 }
 
