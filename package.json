@@ -1,0 +1,24 @@
+{
+  "name": "serverless-keeper",
+  "version": "0.1.0",
+  "description": "More than a todo app comes with less serverishh setup",
+  "main": "handler.js",
+  "scripts": {
+    "test": "serverless-bundle test"
+  },
+  "author": "Sunny Prakash",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sprakash57/serverless-keeper"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.663.0",
+    "serverless-bundle": "^1.2.5",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^5.3.3"
+  },
+  "dependencies": {
+    "uuid": "^7.0.3"
+  }
+}
