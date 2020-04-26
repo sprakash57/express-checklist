@@ -6,7 +6,10 @@ export default function handler(lambda) {
             //on Success
             .then(responseBody => [200, responseBody])
             //on Failure
-            .catch(err => [500, { error: err.message }])
+            .catch(err => {
+                console.log('err --->', err);
+                return [500, { error: err.message }];
+            })
             //Return HTTP response
             .then(([statusCode, body]) => ({
                 statusCode,
@@ -16,5 +19,5 @@ export default function handler(lambda) {
                 },
                 body: JSON.stringify(body)
             }));
-    }
+    };
 }
